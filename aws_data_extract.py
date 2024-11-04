@@ -114,9 +114,9 @@ if __name__ == "__main__":
         print(object_list)
 
         config = TransferConfig(
-            multipart_threshold=1024 * 100,  # 25 MB
+            multipart_threshold=1024 * 100,
             max_concurrency=10,
-            multipart_chunksize=1024 * 100,  # 25 MB
+            multipart_chunksize=1024 * 100,
             use_threads=True,
         )
 
