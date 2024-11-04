@@ -77,8 +77,8 @@ def list_bucket_info(s3_client, bucket_name: str, prefix: str):
 
 if __name__ == "__main__":
 
-    AWS_BUCKET = "hmora-test-data-target"
-    AWS_PREFIX = "country=MEX"
+    AWS_BUCKET = input("Ingresar bucket: ")
+    AWS_PREFIX = input("Ingresar prefijo: ")
 
     # Configure the credentials
     print("========== Ingresar Credenciales ======")
