@@ -78,7 +78,11 @@ def list_bucket_info(s3_client, bucket_name: str, prefix: str):
 if __name__ == "__main__":
 
     AWS_BUCKET = input("Ingresar bucket: ")
-    AWS_PREFIX = "country=MEX/year=2024"
+    AWS_PREFIX = input("Ingresar prefijo: ")
+    if AWS_PREFIX.endswith('/'):
+        AWS_PREFIX = AWS_PREFIX + "country=MEX/year=2024"
+    else:
+        AWS_PREFIX = AWS_PREFIX + "/country=MEX/year=2024"
 
     # Configure the credentials
     print("========== Ingresar Credenciales ======")
